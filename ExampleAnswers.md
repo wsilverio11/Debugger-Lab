@@ -1,14 +1,20 @@
-## Debugger Lab Answers
+## Markdown Example for Debugger Lab Answers
 
 **Question 1:** The double asterisks surrounding "Question 1:" cause the text
 to be bold. Using single asterisks would result in *italics*. For your actual
 answer to Question 1 you will be discussing the variable `cutoff`. When you put
 the name of a variable, method, class, etc. into a Markdown file, you should
 surround it in backticks so it appears in a different font. You can also insert
-a block of code by surrounding it by three backticks, like this:
+a block of code by surrounding it by two sets of three backticks, like this:
 ```
 String example = "Example";
 System.out.println(example);
+```
+If you add a language name after the first set of backticks, GitHub will add
+syntax highlighting to the code:
+```java
+String anotherExample = "Another example!";
+System.out.println(anotherExample);
 ```
 
 **Question 2:** Separating each answer with a blank line causes each answer to
@@ -24,6 +30,7 @@ separate
 line
 if
 you
+really
 wanted
 to
 and

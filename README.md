@@ -26,6 +26,24 @@ written in Markdown and saved as README.md in the lab repository. GitHub looks
 for a file called README.md in every repository, and displays it nicely on the
 home page for the repository.
 
+In the lab repository there is a file called `ExampleAnswers.md`. Click on this
+file in GitHub and notice how it is formatted. Now click on the "Raw" button
+above the formatted text. This will show you what the file looks like before
+GitHub applies the formatting.
+
+Open `ExampleAnswers.md` on your computer by opening up Finder and navigating
+to your local clone of the lab repository. By default OS X will open the file
+using TextEdit. When you edit a Markdown file in a text editor you will see the
+raw text as opposed to the formatted text.
+
+TextEdit is fine for editing simple text files, but more sophisticated text
+editors will detect that this file is a Markdown file and add some syntax
+highlighting to make it easier to read and edit. There is a nice text editor
+called TextWrangler installed on the lab machines (this is a free program you
+may want to install on your machine as well if you are using your own Macbook
+for the lab). Open `ExampleAnswers.md` in TextWrangler and note that
+TextWrangler highlights the formatting syntax.
+
 ## Pig
 
 In CS I there was a lab in which you implemented the dice game pig. For those of
