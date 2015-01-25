@@ -10,13 +10,6 @@ a block of code by surrounding it by two sets of three backticks, like this:
 String example = "Example";
 System.out.println(example);
 ```
-If you add a language name after the first set of backticks, GitHub will add
-syntax highlighting to the code:
-```java
-void printExample() {
-  System.out.println(example);
-}
-```
 
 **Question 2:** Separating each answer with a blank line causes each answer to
 be its own paragraph.

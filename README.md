@@ -42,7 +42,12 @@ highlighting to make it easier to read and edit. There is a nice text editor
 called TextWrangler installed on the lab machines (this is a free program you
 may want to install on your machine as well if you are using your own Macbook
 for the lab). Open `ExampleAnswers.md` in TextWrangler and note that
-TextWrangler highlights the formatting syntax.
+TextWrangler highlights the formatting syntax for you.
+
+Put your answers to the lab questions in a file called `Answers.md`. If you use
+TextWrangler you should open a new text file and immediately save it as
+`Answers.md`. TextWrangler will note the `.md` extension on the filename and
+apply Markdown highlighting automatically.
 
 ## Pig
 
@@ -58,8 +63,10 @@ your turn.
 
 ## Pig Implementation
 
-In the git repository for the lab you will find four Java files. Open all four
-files in DrJava.
+In the git repository for the lab you will find a directory called `src`. This
+stands for "source" and is a common naming convention for directories that
+contain source code. In the `src` directory you will find four Java files. Open
+all four files in DrJava.
 
 The following questions are designed to help you become familiar with the code
 you just copied.
@@ -83,20 +90,58 @@ Compile and run the program in DrJava. `Main.java` must be the currently
 selected file in DrJava when you press `Run`, because it is the class that
 contains the `main()` function for our program.
 
-When you run this program, it produces no output and does not terminate.  Your
-goal is to find the error(s) causing this behavior and to fix the code so that
-it executes correctly. **You may not add any additional print statements to
-the code.** Instead, you should use the debugger to trace the execution of the
-program. Before you begin, be sure to answer the following question:
+When you run the program you should see `> run Main` in the Interactions pane,
+and it should say "Running main Method of Current Document" on the bottom bar
+of DrJava. However, the program does not seem to be doing anything.
+
+The program is stuck in an infinite loop. If you open up Activity Monitor
+(start spotlight with cmd-space and start typing Activity Monitor) and look at
+the CPU tab, you will see that java is using a significant portion of your
+CPU. This is because the program is running, but it is not producing output or
+terminating. Press "Reset" in DrJava to halt execution of the program.
+
+Clearly this infinite loop behavior is not what we want this program to
+do. Your goal is to find the error(s) causing this behavior and to fix the code
+so that it executes correctly. **You may not add any additional print
+statements to the code.** Instead, you should use the debugger to trace the
+execution of the program. Before you begin, be sure to answer the following
+question:
 
 **Question 4:** Based on your current understanding of the code, where do you
 think the problem(s) might be located?  Are there portions of the code where
 you are fairly certain the problem(s) could not possibly be?
 
-For this portion of the lab, please do not tell other students what you
+## Using the Debugger in DrJava
+
+**For this portion of the lab, please do not tell other students what you
 discover.  The point of the exercise is for each of you to determine what is
 wrong by eliminating lines of code until you find the one(s) that are
-incorrect.
+incorrect.**
+
+To trace code in the debugger you need to toggle "Debug Mode" in the "Debugger"
+menu. You will need to set up breakpoints and watches to step through the code
+and see the values of variables. Let's start by setting a breakpoint at the
+first line of execution on line 12 of Main.java. Place your cursor on the line
+and select "Toggle Breakpoint on Current Line". You may also use the keyboard
+shortcut cmd-b. The line should now be highlighted in red.
+
+Now when you run the program it will pause when it hits the breakpoint. You can
+now step through the program line by line by pressing the "Step Into"
+button. DrJava will step forward one line of execution each time you press the
+button. If a method is called, it will take you into the method. After the
+method returns, you will be returned to the calling method. Keep pressing "Step
+Into" and notice what happens. Move on when you understand how this works.
+
+We would like to see the values of different variables while we are stepping
+through the execution. To do this we need to set up watches. When you have
+stepped to a part of the code where you would like to see the value of a
+variable, enter the name of the variable in the "Name" field of the "Watches"
+pane. Now every time a variable with that name is in scope it will show you the
+variable's value and type.
+
+Find the issue in the code by stepping through and finding the variable(s)
+whose values are not what you would expect. Change the code so that it works
+correctly.
 
 **Question 5:** Describe the problem(s) with the program and the way(s) you
 made the program execute correctly.
