@@ -13,8 +13,9 @@ System.out.println(example);
 If you add a language name after the first set of backticks, GitHub will add
 syntax highlighting to the code:
 ```java
-String anotherExample = "Another example!";
-System.out.println(anotherExample);
+void printExample() {
+  System.out.println(example);
+}
 ```
 
 **Question 2:** Separating each answer with a blank line causes each answer to
