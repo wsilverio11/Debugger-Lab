@@ -92,14 +92,14 @@ System.out.println(s.getTurnAverage());
 ```
 
 **Question 3:** In the `PigGame` class, `numBusts` is incremented in the
-`playGame` class. Describe how this statement could be moved to another method
-in the class without affecting the results.
+`playGame` method. Describe how this statement could be moved to another
+method in the class without affecting the results.
 
 ### Fixing the Pig
 
 Compile and run the program in DrJava. `Main.java` must be the currently
 selected file in DrJava when you press `Run`, because it is the class that
-contains the `main()` function for our program.
+contains the `main` method for our program.
 
 When you run the program you should see `> run Main` in the Interactions pane,
 and it should say "Running main Method of Current Document" on the bottom bar
