@@ -1,30 +1,41 @@
-# CSCI 121: Computer Science II - Debugger Lab
+# CSCI 121: Computer Science II
+## Debugger Lab
 
-## Overview
+### Overview
 
 The goal of this lab is for you to learn about and practice using the debugger
 built into DrJava. In addition, you will see an example of a program where
 multiple classes work together to solve a larger problem.
 
-## Workflow
+### Workflow
 
-You will use the same GitHub workflow for this lab as you did for last week's
-lab. To get started, fork this repository. Clone your forked repository to the
-machine you are working on, complete the lab, add to the repository the files
-you created, commit, push, and create a pull request. If you forget the details
-of these steps, see last week's lab.
+You will use the same git workflow for this lab as you did for last week's lab:
+
+1. Fork the assignment repository
+2. Clone your forked repository to the machine you are working on
+3. Complete the lab
+4. Add any files you created to the repository
+5. Commit
+6. Push
+7. Review your repository on GitHub to make sure everything looks good
+8. Create a pull request
+
+If you forget the details of these steps, review last week's lab.
 
 In last week's lab you created a text file and a Java file for your
 submission. This week's lab requires you to answer a series of questions and
 fix some Java code. The changes you make to the Java code will be detected and
-added to the repository by git when you commit. Your answers to the questions
-in the lab should be placed in a *Markdown* file.
+added to the repository by git automatically when you commit. Your answers to
+the questions in the lab should be placed in a *Markdown* file.
 
-Markdown allows you to add special formatting syntax to text files so that they
-can be converted to nice looking web pages or documents. This lab document was
-written in Markdown and saved as README.md in the lab repository. GitHub looks
-for a file called README.md in every repository, and displays it nicely on the
-home page for the repository.
+### Editing Markdown Files
+
+Markdown is a markup language. Markup languages allow you to add special
+formatting syntax to text files so that they can be converted to nice looking
+web pages or documents. This lab document was written in Markdown and saved as
+`README.md` in the lab repository. GitHub looks for a file called `README.md`
+in every repository. If it exists, GitHub displays it nicely on the home page
+for the repository.
 
 In the lab repository there is a file called `ExampleAnswers.md`. Click on this
 file in GitHub and notice how it is formatted. Now click on the "Raw" button
@@ -46,10 +57,10 @@ TextWrangler highlights the formatting syntax for you.
 
 Put your answers to the lab questions in a file called `Answers.md`. If you use
 TextWrangler you should open a new text file and immediately save it as
-`Answers.md`. TextWrangler will note the `.md` extension on the filename and
-apply Markdown highlighting automatically.
+`Answers.md` in the assignment repository directory. TextWrangler will note the
+`.md` extension on the filename and apply Markdown highlighting automatically.
 
-## Pig
+### Pig
 
 In CS I there was a lab in which you implemented the dice game pig. For those of
 you who haven't been playing pig regularly since then, here are the rules of
@@ -61,7 +72,7 @@ a one, whichever comes first. If you choose to stop, then you score the sum of
 all your die rolls. However, if you roll a one before stopping, you score 0 for
 your turn.
 
-## Pig Implementation
+### Pig Implementation
 
 In the git repository for the lab you will find a directory called `src`. This
 stands for "source" and is a common naming convention for directories that
@@ -69,7 +80,7 @@ contain source code. In the `src` directory you will find four Java files. Open
 all four files in DrJava.
 
 The following questions are designed to help you become familiar with the code
-you just copied.
+you just opened.
 
 **Question 1:** Why is `cutoff` not a parameter to the method `playTurn` in the
 `PigGame` class?
@@ -84,7 +95,7 @@ System.out.println(s.getTurnAverage());
 `playGame` class. Describe how this statement could be moved to another method
 in the class without affecting the results.
 
-## Fixing the Pig
+### Fixing the Pig
 
 Compile and run the program in DrJava. `Main.java` must be the currently
 selected file in DrJava when you press `Run`, because it is the class that
@@ -92,7 +103,7 @@ contains the `main()` function for our program.
 
 When you run the program you should see `> run Main` in the Interactions pane,
 and it should say "Running main Method of Current Document" on the bottom bar
-of DrJava. However, the program does not seem to be doing anything.
+of DrJava. However, the program does not seem do anything.
 
 The program is stuck in an infinite loop. If you open up Activity Monitor
 (start spotlight with cmd-space and start typing Activity Monitor) and look at
@@ -111,37 +122,38 @@ question:
 think the problem(s) might be located?  Are there portions of the code where
 you are fairly certain the problem(s) could not possibly be?
 
-## Using the Debugger in DrJava
+### Using the Debugger in DrJava
 
 **For this portion of the lab, please do not tell other students what you
 discover.  The point of the exercise is for each of you to determine what is
-wrong by eliminating lines of code until you find the one(s) that are
+wrong by examining lines of code until you find the one(s) that are
 incorrect.**
 
 To trace code in the debugger you need to toggle "Debug Mode" in the "Debugger"
 menu. You will need to set up breakpoints and watches to step through the code
-and see the values of variables. Let's start by setting a breakpoint at the
+and see the values of variables. Start by setting a breakpoint at the
 first line of execution on line 12 of Main.java. Place your cursor on the line
 and select "Toggle Breakpoint on Current Line". You may also use the keyboard
 shortcut cmd-b. The line should now be highlighted in red.
 
 Now when you run the program it will pause when it hits the breakpoint. You can
-now step through the program line by line by pressing the "Step Into"
+step through the program line by line by pressing the "Step Into"
 button. DrJava will step forward one line of execution each time you press the
 button. If a method is called, it will take you into the method. After the
 method returns, you will be returned to the calling method. Keep pressing "Step
-Into" and notice what happens. Move on when you understand how this works.
+Into" and notice what happens. Read on when you're sure you understand how this
+works.
 
 We would like to see the values of different variables while we are stepping
 through the execution. To do this we need to set up watches. When you have
 stepped to a part of the code where you would like to see the value of a
-variable, enter the name of the variable in the "Name" field of the "Watches"
-pane. Now every time a variable with that name is in scope it will show you the
-variable's value and type.
+variable, enter the name of the variable in the "Name" field of an empty row in
+the "Watches" pane. Now every time a variable with that name is in scope it
+will show you the variable's value and type.
 
 Find the issue in the code by stepping through and finding the variable(s)
-whose values are not what you would expect. Change the code so that it works
-correctly.
+whose values are not what they should be, and the statement(s) that are causing
+the problem. Change the code so that it works correctly.
 
 **Question 5:** Describe the problem(s) with the program and the way(s) you
 made the program execute correctly.
