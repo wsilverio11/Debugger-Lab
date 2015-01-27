@@ -6,6 +6,7 @@ answer to Question 1 you will be discussing the variable `cutoff`. When you put
 the name of a variable, method, class, etc. into a Markdown file, you should
 surround it in backticks so it appears in a different font. You can also insert
 a block of code by surrounding it by two sets of three backticks, like this:
+
 ```
 String example = "Example";
 System.out.println(example);
